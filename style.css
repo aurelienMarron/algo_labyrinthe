@@ -1,0 +1,34 @@
+
+h1{
+    color:red;
+    text-align: center;
+    margin-top: 100px;
+}
+
+.container{
+    display: flex;
+    flex-direction: row;
+}
+
+#cadre{
+    margin-left: auto;
+    margin-right: auto;
+    width: 50em;
+    height:60em;
+    border: solid 5px;
+}
+
+.ligne{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height:20em;
+    box-sizing : border-box;
+}
+
+.case{
+    width: 100%;
+    height:20em;
+    box-sizing : border-box;
+}
+
