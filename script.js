@@ -43,12 +43,12 @@ function createLines() {
 
         idCadre.append(nvldiv);
         nvldiv.classList.add("ligne");
-        nvldiv.setAttribute("id",  i)
+        nvldiv.setAttribute("id", i)
         for (let j = 0; j <= structure_lab[structure_lab.length - 1].posY; j++) {
             let carre = document.createElement('div');
             nvldiv.append(carre);
             carre.classList.add("case");
-            carre.setAttribute("id", i +""+j)
+            carre.setAttribute("id", i + "" + j)
             let idcarre = carre.getAttribute("id");
             const foundelement = structure_lab.find(el => findLeBon(el, idcarre));
             createWalls(foundelement, carre);
@@ -158,52 +158,61 @@ function arrivee() {
 // }
 
 createLines();
-console.log(structure_lab)
-console.log(structure_lab[0])
 
-function resolution(){
-    let positionFinal={"posX":structure_lab[structure_lab.length - 1].posX ,"posY":structure_lab[structure_lab.length - 1].posY  }
-    let position={"posX":0 , "posY":0}
-    let ligneStructure=structure_lab.find(element=>element=position);
-    // console.log(ligneStructure)
-    // position=avancee(position, ligneStructure)
-    // console.log(position)
-    //  ligneStructure=structure_lab.find(element=>element.posY===position.posY && element.posX===position.posX);
-    // console.log(ligneStructure)
-    // position=avancee(position, ligneStructure)
-    // ligneStructure=structure_lab.find(element=>element=position);
-    while(position!==positionFinal) {
-        position=avancee(position, ligneStructure);
-        ligneStructure=structure_lab.find(element=>element.posY===position.posY && element.posX===position.posX);
+
+function resolution() {
+    let positionFinal = {
+        "posX": structure_lab[structure_lab.length - 1].posX,
+        "posY": structure_lab[structure_lab.length - 1].posY
+    }
+    let position = {"posX": 0, "posY": 0};
+    structure_lab.find(element => element.posY === position.posY && element.posX === position.posX).visited = "true"
+    let ligneStructure = structure_lab.find(element => element = position);
+    let grain2riz = {"posX": 0, "posY": 0};
+    position = avancee(position, ligneStructure);
+    structure_lab.find(element => element.posY === position.posY && element.posX === position.posX).visited = "true"
+    ligneStructure = structure_lab.find(element => element.posY === position.posY && element.posX === position.posX);
+    console.log(position)
+    displayPion(position);
+    while (!(position.posX === positionFinal.posX && position.posY === positionFinal.posY) ){
+        let nbMur = compteMur(ligneStructure);
+        if (nbMur === 1) {
+            grain2riz = {"posX": position.posX, "posY": position.posY};
+        }
+        if (nbMur === 3) {
+            position.posX = grain2riz.posX;
+            position.posY = grain2riz.posY;
+            ligneStructure = structure_lab.find(element => element.posY === position.posY && element.posX === position.posX);
+            console.log(position)
+            displayPion(position);
+        } else {
+            position = avancee(position, ligneStructure);
+            structure_lab.find(element => element.posY === position.posY && element.posX === position.posX).visited = "true"
+            ligneStructure = structure_lab.find(element => element.posY === position.posY && element.posX === position.posX);
+            console.log(position)
+            displayPion(position);
+        }
     }
 }
 
-function avancee(position,ligneStructure){
-    let grain2riz;
-    nbMur=compteMur(ligneStructure);
-    csORinter(nbMur,position,grain2riz);
-    if(ligneStructure.walls[0]===false){
+function avancee(position, ligneStructure) {
+    if (ligneStructure.walls[0] === false && structure_lab.find(element => element.posY === position.posY - 1 && element.posX === position.posX).visited === undefined) {
         position.posY--
-    }else if(ligneStructure.walls[1]===false){
-        position.posX++
-    }else if(ligneStructure.walls[2]===false){
-        position.posY++
-    }else if(ligneStructure.walls[3]===false){
+    } else if (ligneStructure.walls[3] === false && structure_lab.find(element => element.posY === position.posY && element.posX === position.posX - 1).visited === undefined) {
         position.posX--
+    } else if (ligneStructure.walls[2] === false && structure_lab.find(element => element.posY === position.posY + 1 && element.posX === position.posX).visited === undefined) {
+        position.posY++
+    } else if (ligneStructure.walls[1] === false && structure_lab.find(element => element.posY === position.posY && element.posX === position.posX + 1).visited === undefined) {
+        position.posX++
     }
-    console.log(position)
     return position
 }
 
-function compteMur(ligneStructure){
-     return nbMur=ligneStructure.walls.filter(murs=>murs===true).length
+function compteMur(ligneStructure) {
+    return ligneStructure.walls.filter(murs => murs === true).length
 }
 
-function csORinter(nbMur,position,grain2riz){
-    if(nbMur<=1){
-        return grain2riz=position;
-    }
-    else if(nbMur===3){
-         return position=grain2riz;
-    }
+function displayPion(position){
+     let idCase=position.posY+""+position.posX;
+     document.getElementById(idCase).setAttribute("class","pion");
 }
