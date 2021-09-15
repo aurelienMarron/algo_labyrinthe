@@ -693,3 +693,51 @@ async function dfs() {
         }
     }
 }
+
+async function bfs(){
+    let positionFinal = {
+        "posX": structure_lab[structure_lab.length - 1].posX,
+        "posY": structure_lab[structure_lab.length - 1].posY
+    };
+    let position = {"posX": 0, "posY": 0};
+    let ligneStructure = structure_lab.find(element => element = position);
+    let queue = [];
+    let trajet=[];
+    queue.unshift(position);
+    while (queue.length !== 0) {
+        position = queue.shift();
+        ligneStructure = structure_lab.find(element => element.posY === position.posY && element.posX === position.posX);
+        structure_lab.find(element => element.posY === position.posY && element.posX === position.posX).visited = "true";
+        trajet.push(position)
+        console.log(position)
+        if (position.posX === positionFinal.posX && position.posY === positionFinal.posY) {
+            for (let i = 0; i < trajet.length; i++) {
+                ligneStructure = structure_lab.find(element => element.posY === trajet[i].posY && element.posX === trajet[i].posX);
+                if (ligneStructure.walls.filter(murs => murs === true).length === 3) {
+                    document.getElementById(trajet[i].posY + "" + trajet[i].posX).style.backgroundColor = "purple";
+                } else {
+                    let idCase = trajet[i].posY + "" + trajet[i].posX;
+                    await delay(500)
+                    document.getElementById(idCase).setAttribute("class", "pion");
+                }
+            } document.getElementById(structure_lab[structure_lab.length - 1].posY+""+structure_lab[structure_lab.length - 1].posX).style.backgroundColor = "gold";
+        } else {
+            if (ligneStructure.walls[0] === false && structure_lab.find(element => element.posY === position.posY - 1 && element.posX === position.posX).visited === undefined) {
+                let voisin = {"posX": position.posX, "posY": position.posY - 1}
+                queue.push(voisin)
+            }
+            if (ligneStructure.walls[1] === false && structure_lab.find(element => element.posY === position.posY && element.posX === position.posX + 1).visited === undefined) {
+                let voisin = {"posX": position.posX + 1, "posY": position.posY}
+                queue.push(voisin)
+            }
+            if (ligneStructure.walls[2] === false && structure_lab.find(element => element.posY === position.posY + 1 && element.posX === position.posX).visited === undefined) {
+                let voisin = {"posX": position.posX, "posY": position.posY + 1}
+                queue.push(voisin)
+            }
+            if (ligneStructure.walls[3] === false && structure_lab.find(element => element.posY === position.posY && element.posX === position.posX - 1).visited === undefined) {
+                let voisin = {"posX": position.posX - 1, "posY": position.posY}
+                queue.push(voisin)
+            }
+        }
+    }
+}
