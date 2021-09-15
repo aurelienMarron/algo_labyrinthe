@@ -702,42 +702,44 @@ let trajet = [];
 stack.push(position);
 trajet.push(position)
 async function dfsrecursive(){
-    let position = stack.pop();
-    let ligneStructure = structure_lab.find(element => element.posY === position.posY && element.posX === position.posX);
-    structure_lab.find(element => element.posY === position.posY && element.posX === position.posX).visited = "true";
-    trajet.push(position)
-    console.log(position)
-    if (position.posX === positionFinal.posX && position.posY === positionFinal.posY) {
-        for (let i = 0; i < trajet.length; i++) {
-            ligneStructure = structure_lab.find(element => element.posY === trajet[i].posY && element.posX === trajet[i].posX);
-            if (ligneStructure.walls.filter(murs => murs === true).length === 3) {
-                document.getElementById(trajet[i].posY + "" + trajet[i].posX).style.backgroundColor = "purple";
-            } else {
-                let idCase = trajet[i].posY + "" + trajet[i].posX;
-                await delay(200)
-                document.getElementById(idCase).setAttribute("class", "pion");
+    if(stack.length!==0) {
+        position = stack.pop();
+        let ligneStructure = structure_lab.find(element => element.posY === position.posY && element.posX === position.posX);
+        structure_lab.find(element => element.posY === position.posY && element.posX === position.posX).visited = "true";
+        trajet.push(position)
+        console.log(position)
+        if (position.posX === positionFinal.posX && position.posY === positionFinal.posY) {
+            for (let i = 0; i < trajet.length; i++) {
+                ligneStructure = structure_lab.find(element => element.posY === trajet[i].posY && element.posX === trajet[i].posX);
+                if (ligneStructure.walls.filter(murs => murs === true).length === 3) {
+                    document.getElementById(trajet[i].posY + "" + trajet[i].posX).style.backgroundColor = "purple";
+                } else {
+                    let idCase = trajet[i].posY + "" + trajet[i].posX;
+                    await delay(200)
+                    document.getElementById(idCase).setAttribute("class", "pion");
+                }
+            }
+            document.getElementById(structure_lab[structure_lab.length - 1].posY + "" + structure_lab[structure_lab.length - 1].posX).style.backgroundColor = "gold";
+        } else {
+            if (ligneStructure.walls[0] === false && structure_lab.find(element => element.posY === position.posY - 1 && element.posX === position.posX).visited === undefined) {
+                let voisin = {"posX": position.posX, "posY": position.posY - 1}
+                stack.push(voisin)
+            }
+            if (ligneStructure.walls[1] === false && structure_lab.find(element => element.posY === position.posY && element.posX === position.posX + 1).visited === undefined) {
+                let voisin = {"posX": position.posX + 1, "posY": position.posY}
+                stack.push(voisin)
+            }
+            if (ligneStructure.walls[2] === false && structure_lab.find(element => element.posY === position.posY + 1 && element.posX === position.posX).visited === undefined) {
+                let voisin = {"posX": position.posX, "posY": position.posY + 1}
+                stack.push(voisin)
+            }
+            if (ligneStructure.walls[3] === false && structure_lab.find(element => element.posY === position.posY && element.posX === position.posX - 1).visited === undefined) {
+                let voisin = {"posX": position.posX - 1, "posY": position.posY}
+                stack.push(voisin)
             }
         }
-        document.getElementById(structure_lab[structure_lab.length - 1].posY + "" + structure_lab[structure_lab.length - 1].posX).style.backgroundColor = "gold";
-    } else  {
-        if (ligneStructure.walls[0] === false && structure_lab.find(element => element.posY === position.posY - 1 && element.posX === position.posX).visited === undefined) {
-            let voisin = {"posX": position.posX, "posY": position.posY - 1}
-            stack.push(voisin)
-        }
-        if (ligneStructure.walls[1] === false && structure_lab.find(element => element.posY === position.posY && element.posX === position.posX + 1).visited === undefined) {
-            let voisin = {"posX": position.posX + 1, "posY": position.posY}
-            stack.push(voisin)
-        }
-        if (ligneStructure.walls[2] === false && structure_lab.find(element => element.posY === position.posY + 1 && element.posX === position.posX).visited === undefined) {
-            let voisin = {"posX": position.posX, "posY": position.posY + 1}
-            stack.push(voisin)
-        }
-        if (ligneStructure.walls[3] === false && structure_lab.find(element => element.posY === position.posY && element.posX === position.posX - 1).visited === undefined) {
-            let voisin = {"posX": position.posX - 1, "posY": position.posY}
-            stack.push(voisin)
-        }
-    }
         await dfsrecursive(stack, trajet)
+    }
 }
 
 async function bfs() {
@@ -791,41 +793,43 @@ async function bfs() {
 
 let queue=[];
 queue.unshift(position);
-async function bfsrecursive(){
-    let position = queue.shift();
-    let ligneStructure = structure_lab.find(element => element.posY === position.posY && element.posX === position.posX);
-    structure_lab.find(element => element.posY === position.posY && element.posX === position.posX).visited = "true";
-    trajet.push(position)
-    console.log(position)
-    if (position.posX === positionFinal.posX && position.posY === positionFinal.posY) {
-        for (let i = 0; i < trajet.length; i++) {
-            ligneStructure = structure_lab.find(element => element.posY === trajet[i].posY && element.posX === trajet[i].posX);
-            if (ligneStructure.walls.filter(murs => murs === true).length === 3) {
-                document.getElementById(trajet[i].posY + "" + trajet[i].posX).style.backgroundColor = "purple";
-            } else {
-                let idCase = trajet[i].posY + "" + trajet[i].posX;
-                await delay(200)
-                document.getElementById(idCase).setAttribute("class", "pion");
+async function bfsrecursive() {
+    if (queue.length !== 0) {
+        let position = queue.shift();
+        let ligneStructure = structure_lab.find(element => element.posY === position.posY && element.posX === position.posX);
+        structure_lab.find(element => element.posY === position.posY && element.posX === position.posX).visited = "true";
+        trajet.push(position)
+        console.log(position)
+        if (position.posX === positionFinal.posX && position.posY === positionFinal.posY) {
+            for (let i = 0; i < trajet.length; i++) {
+                ligneStructure = structure_lab.find(element => element.posY === trajet[i].posY && element.posX === trajet[i].posX);
+                if (ligneStructure.walls.filter(murs => murs === true).length === 3) {
+                    document.getElementById(trajet[i].posY + "" + trajet[i].posX).style.backgroundColor = "purple";
+                } else {
+                    let idCase = trajet[i].posY + "" + trajet[i].posX;
+                    await delay(200)
+                    document.getElementById(idCase).setAttribute("class", "pion");
+                }
+            }
+            document.getElementById(structure_lab[structure_lab.length - 1].posY + "" + structure_lab[structure_lab.length - 1].posX).style.backgroundColor = "gold";
+        } else {
+            if (ligneStructure.walls[0] === false && structure_lab.find(element => element.posY === position.posY - 1 && element.posX === position.posX).visited === undefined) {
+                let voisin = {"posX": position.posX, "posY": position.posY - 1}
+                queue.push(voisin)
+            }
+            if (ligneStructure.walls[1] === false && structure_lab.find(element => element.posY === position.posY && element.posX === position.posX + 1).visited === undefined) {
+                let voisin = {"posX": position.posX + 1, "posY": position.posY}
+                queue.push(voisin)
+            }
+            if (ligneStructure.walls[2] === false && structure_lab.find(element => element.posY === position.posY + 1 && element.posX === position.posX).visited === undefined) {
+                let voisin = {"posX": position.posX, "posY": position.posY + 1}
+                queue.push(voisin)
+            }
+            if (ligneStructure.walls[3] === false && structure_lab.find(element => element.posY === position.posY && element.posX === position.posX - 1).visited === undefined) {
+                let voisin = {"posX": position.posX - 1, "posY": position.posY}
+                queue.push(voisin)
             }
         }
-        document.getElementById(structure_lab[structure_lab.length - 1].posY + "" + structure_lab[structure_lab.length - 1].posX).style.backgroundColor = "gold";
-    } else {
-        if (ligneStructure.walls[0] === false && structure_lab.find(element => element.posY === position.posY - 1 && element.posX === position.posX).visited === undefined) {
-            let voisin = {"posX": position.posX, "posY": position.posY - 1}
-            queue.push(voisin)
-        }
-        if (ligneStructure.walls[1] === false && structure_lab.find(element => element.posY === position.posY && element.posX === position.posX + 1).visited === undefined) {
-            let voisin = {"posX": position.posX + 1, "posY": position.posY}
-            queue.push(voisin)
-        }
-        if (ligneStructure.walls[2] === false && structure_lab.find(element => element.posY === position.posY + 1 && element.posX === position.posX).visited === undefined) {
-            let voisin = {"posX": position.posX, "posY": position.posY + 1}
-            queue.push(voisin)
-        }
-        if (ligneStructure.walls[3] === false && structure_lab.find(element => element.posY === position.posY && element.posX === position.posX - 1).visited === undefined) {
-            let voisin = {"posX": position.posX - 1, "posY": position.posY}
-            queue.push(voisin)
-        }
+        await bfsrecursive(queue, trajet)
     }
-    await bfsrecursive(queue,trajet)
 }
