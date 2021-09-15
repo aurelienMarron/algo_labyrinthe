@@ -719,7 +719,7 @@ async function dfsrecursive(){
             }
         }
         document.getElementById(structure_lab[structure_lab.length - 1].posY + "" + structure_lab[structure_lab.length - 1].posX).style.backgroundColor = "gold";
-    } else {
+    } else  {
         if (ligneStructure.walls[0] === false && structure_lab.find(element => element.posY === position.posY - 1 && element.posX === position.posX).visited === undefined) {
             let voisin = {"posX": position.posX, "posY": position.posY - 1}
             stack.push(voisin)
@@ -737,7 +737,7 @@ async function dfsrecursive(){
             stack.push(voisin)
         }
     }
-    await dfsrecursive(stack,trajet)
+        await dfsrecursive(stack, trajet)
 }
 
 async function bfs() {
