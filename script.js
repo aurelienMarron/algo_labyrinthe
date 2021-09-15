@@ -1,496 +1,496 @@
 let structure_lab =
-        [
-            {
-                "posX": 0,
-                "posY": 0,
-                "walls": [
-                    true,
-                    true,
-                    false,
-                    true
-                ]
-            },
-            {
-                "posX": 1,
-                "posY": 0,
-                "walls": [
-                    true,
-                    false,
-                    true,
-                    true
-                ]
-            },
-            {
-                "posX": 2,
-                "posY": 0,
-                "walls": [
-                    true,
-                    false,
-                    true,
-                    false
-                ]
-            },
-            {
-                "posX": 3,
-                "posY": 0,
-                "walls": [
-                    true,
-                    false,
-                    false,
-                    false
-                ]
-            },
-            {
-                "posX": 4,
-                "posY": 0,
-                "walls": [
-                    true,
-                    false,
-                    true,
-                    false
-                ]
-            },
-            {
-                "posX": 5,
-                "posY": 0,
-                "walls": [
-                    true,
-                    false,
-                    true,
-                    false
-                ]
-            },
-            {
-                "posX": 6,
-                "posY": 0,
-                "walls": [
-                    true,
-                    true,
-                    false,
-                    false
-                ]
-            },
-            {
-                "posX": 0,
-                "posY": 1,
-                "walls": [
-                    false,
-                    true,
-                    false,
-                    true
-                ]
-            },
-            {
-                "posX": 1,
-                "posY": 1,
-                "walls": [
-                    true,
-                    false,
-                    false,
-                    true
-                ]
-            },
-            {
-                "posX": 2,
-                "posY": 1,
-                "walls": [
-                    true,
-                    true,
-                    false,
-                    false
-                ]
-            },
-            {
-                "posX": 3,
-                "posY": 1,
-                "walls": [
-                    false,
-                    false,
-                    false,
-                    true
-                ]
-            },
-            {
-                "posX": 4,
-                "posY": 1,
-                "walls": [
-                    true,
-                    true,
-                    true,
-                    false
-                ]
-            },
-            {
-                "posX": 5,
-                "posY": 1,
-                "walls": [
-                    true,
-                    false,
-                    false,
-                    true
-                ]
-            },
-            {
-                "posX": 6,
-                "posY": 1,
-                "walls": [
-                    false,
-                    true,
-                    false,
-                    false
-                ]
-            },
-            {
-                "posX": 0,
-                "posY": 2,
-                "walls": [
-                    false,
-                    false,
-                    true,
-                    true
-                ]
-            },
-            {
-                "posX": 1,
-                "posY": 2,
-                "walls": [
-                    false,
-                    true,
-                    true,
-                    false
-                ]
-            },
-            {
-                "posX": 2,
-                "posY": 2,
-                "walls": [
-                    false,
-                    true,
-                    false,
-                    true
-                ]
-            },
-            {
-                "posX": 3,
-                "posY": 2,
-                "walls": [
-                    false,
-                    true,
-                    true,
-                    true
-                ]
-            },
-            {
-                "posX": 4,
-                "posY": 2,
-                "walls": [
-                    true,
-                    false,
-                    false,
-                    true
-                ]
-            },
-            {
-                "posX": 5,
-                "posY": 2,
-                "walls": [
-                    false,
-                    true,
-                    true,
-                    false
-                ]
-            },
-            {
-                "posX": 6,
-                "posY": 2,
-                "walls": [
-                    false,
-                    true,
-                    false,
-                    true
-                ]
-            },
-            {
-                "posX": 0,
-                "posY": 3,
-                "walls": [
-                    true,
-                    false,
-                    false,
-                    true
-                ]
-            },
-            {
-                "posX": 1,
-                "posY": 3,
-                "walls": [
-                    true,
-                    true,
-                    true,
-                    false
-                ]
-            },
-            {
-                "posX": 2,
-                "posY": 3,
-                "walls": [
-                    false,
-                    false,
-                    true,
-                    true
-                ]
-            },
-            {
-                "posX": 3,
-                "posY": 3,
-                "walls": [
-                    true,
-                    false,
-                    true,
-                    false
-                ]
-            },
-            {
-                "posX": 4,
-                "posY": 3,
-                "walls": [
-                    false,
-                    true,
-                    true,
-                    false
-                ]
-            },
-            {
-                "posX": 5,
-                "posY": 3,
-                "walls": [
-                    true,
-                    true,
-                    false,
-                    true
-                ]
-            },
-            {
-                "posX": 6,
-                "posY": 3,
-                "walls": [
-                    false,
-                    true,
-                    false,
-                    true
-                ]
-            },
-            {
-                "posX": 0,
-                "posY": 4,
-                "walls": [
-                    false,
-                    true,
-                    false,
-                    true
-                ]
-            },
-            {
-                "posX": 1,
-                "posY": 4,
-                "walls": [
-                    true,
-                    false,
-                    false,
-                    true
-                ]
-            },
-            {
-                "posX": 2,
-                "posY": 4,
-                "walls": [
-                    true,
-                    false,
-                    false,
-                    false
-                ]
-            },
-            {
-                "posX": 3,
-                "posY": 4,
-                "walls": [
-                    true,
-                    false,
-                    true,
-                    false
-                ]
-            },
-            {
-                "posX": 4,
-                "posY": 4,
-                "walls": [
-                    true,
-                    false,
-                    true,
-                    false
-                ]
-            },
-            {
-                "posX": 5,
-                "posY": 4,
-                "walls": [
-                    false,
-                    true,
-                    true,
-                    false
-                ]
-            },
-            {
-                "posX": 6,
-                "posY": 4,
-                "walls": [
-                    false,
-                    true,
-                    false,
-                    true
-                ]
-            },
-            {
-                "posX": 0,
-                "posY": 5,
-                "walls": [
-                    false,
-                    true,
-                    false,
-                    true
-                ]
-            },
-            {
-                "posX": 1,
-                "posY": 5,
-                "walls": [
-                    false,
-                    true,
-                    false,
-                    true
-                ]
-            },
-            {
-                "posX": 2,
-                "posY": 5,
-                "walls": [
-                    false,
-                    false,
-                    true,
-                    true
-                ]
-            },
-            {
-                "posX": 3,
-                "posY": 5,
-                "walls": [
-                    true,
-                    false,
-                    true,
-                    false
-                ]
-            },
-            {
-                "posX": 4,
-                "posY": 5,
-                "walls": [
-                    true,
-                    false,
-                    true,
-                    false
-                ]
-            },
-            {
-                "posX": 5,
-                "posY": 5,
-                "walls": [
-                    true,
-                    false,
-                    true,
-                    false
-                ]
-            },
-            {
-                "posX": 6,
-                "posY": 5,
-                "walls": [
-                    false,
-                    true,
-                    true,
-                    false
-                ]
-            },
-            {
-                "posX": 0,
-                "posY": 6,
-                "walls": [
-                    false,
-                    false,
-                    true,
-                    true
-                ]
-            },
-            {
-                "posX": 1,
-                "posY": 6,
-                "walls": [
-                    false,
-                    false,
-                    true,
-                    false
-                ]
-            },
-            {
-                "posX": 2,
-                "posY": 6,
-                "walls": [
-                    true,
-                    false,
-                    true,
-                    false
-                ]
-            },
-            {
-                "posX": 3,
-                "posY": 6,
-                "walls": [
-                    true,
-                    false,
-                    true,
-                    false
-                ]
-            },
-            {
-                "posX": 4,
-                "posY": 6,
-                "walls": [
-                    true,
-                    false,
-                    true,
-                    false
-                ]
-            },
-            {
-                "posX": 5,
-                "posY": 6,
-                "walls": [
-                    true,
-                    false,
-                    true,
-                    false
-                ]
-            },
-            {
-                "posX": 6,
-                "posY": 6,
-                "walls": [
-                    true,
-                    true,
-                    true,
-                    false
-                ]
-            }
-        ]
+    [
+        {
+            "posX": 0,
+            "posY": 0,
+            "walls": [
+                true,
+                true,
+                false,
+                true
+            ]
+        },
+        {
+            "posX": 1,
+            "posY": 0,
+            "walls": [
+                true,
+                false,
+                true,
+                true
+            ]
+        },
+        {
+            "posX": 2,
+            "posY": 0,
+            "walls": [
+                true,
+                false,
+                true,
+                false
+            ]
+        },
+        {
+            "posX": 3,
+            "posY": 0,
+            "walls": [
+                true,
+                false,
+                false,
+                false
+            ]
+        },
+        {
+            "posX": 4,
+            "posY": 0,
+            "walls": [
+                true,
+                false,
+                true,
+                false
+            ]
+        },
+        {
+            "posX": 5,
+            "posY": 0,
+            "walls": [
+                true,
+                false,
+                true,
+                false
+            ]
+        },
+        {
+            "posX": 6,
+            "posY": 0,
+            "walls": [
+                true,
+                true,
+                false,
+                false
+            ]
+        },
+        {
+            "posX": 0,
+            "posY": 1,
+            "walls": [
+                false,
+                true,
+                false,
+                true
+            ]
+        },
+        {
+            "posX": 1,
+            "posY": 1,
+            "walls": [
+                true,
+                false,
+                false,
+                true
+            ]
+        },
+        {
+            "posX": 2,
+            "posY": 1,
+            "walls": [
+                true,
+                true,
+                false,
+                false
+            ]
+        },
+        {
+            "posX": 3,
+            "posY": 1,
+            "walls": [
+                false,
+                false,
+                false,
+                true
+            ]
+        },
+        {
+            "posX": 4,
+            "posY": 1,
+            "walls": [
+                true,
+                true,
+                true,
+                false
+            ]
+        },
+        {
+            "posX": 5,
+            "posY": 1,
+            "walls": [
+                true,
+                false,
+                false,
+                true
+            ]
+        },
+        {
+            "posX": 6,
+            "posY": 1,
+            "walls": [
+                false,
+                true,
+                false,
+                false
+            ]
+        },
+        {
+            "posX": 0,
+            "posY": 2,
+            "walls": [
+                false,
+                false,
+                true,
+                true
+            ]
+        },
+        {
+            "posX": 1,
+            "posY": 2,
+            "walls": [
+                false,
+                true,
+                true,
+                false
+            ]
+        },
+        {
+            "posX": 2,
+            "posY": 2,
+            "walls": [
+                false,
+                true,
+                false,
+                true
+            ]
+        },
+        {
+            "posX": 3,
+            "posY": 2,
+            "walls": [
+                false,
+                true,
+                true,
+                true
+            ]
+        },
+        {
+            "posX": 4,
+            "posY": 2,
+            "walls": [
+                true,
+                false,
+                false,
+                true
+            ]
+        },
+        {
+            "posX": 5,
+            "posY": 2,
+            "walls": [
+                false,
+                true,
+                true,
+                false
+            ]
+        },
+        {
+            "posX": 6,
+            "posY": 2,
+            "walls": [
+                false,
+                true,
+                false,
+                true
+            ]
+        },
+        {
+            "posX": 0,
+            "posY": 3,
+            "walls": [
+                true,
+                false,
+                false,
+                true
+            ]
+        },
+        {
+            "posX": 1,
+            "posY": 3,
+            "walls": [
+                true,
+                true,
+                true,
+                false
+            ]
+        },
+        {
+            "posX": 2,
+            "posY": 3,
+            "walls": [
+                false,
+                false,
+                true,
+                true
+            ]
+        },
+        {
+            "posX": 3,
+            "posY": 3,
+            "walls": [
+                true,
+                false,
+                true,
+                false
+            ]
+        },
+        {
+            "posX": 4,
+            "posY": 3,
+            "walls": [
+                false,
+                true,
+                true,
+                false
+            ]
+        },
+        {
+            "posX": 5,
+            "posY": 3,
+            "walls": [
+                true,
+                true,
+                false,
+                true
+            ]
+        },
+        {
+            "posX": 6,
+            "posY": 3,
+            "walls": [
+                false,
+                true,
+                false,
+                true
+            ]
+        },
+        {
+            "posX": 0,
+            "posY": 4,
+            "walls": [
+                false,
+                true,
+                false,
+                true
+            ]
+        },
+        {
+            "posX": 1,
+            "posY": 4,
+            "walls": [
+                true,
+                false,
+                false,
+                true
+            ]
+        },
+        {
+            "posX": 2,
+            "posY": 4,
+            "walls": [
+                true,
+                false,
+                false,
+                false
+            ]
+        },
+        {
+            "posX": 3,
+            "posY": 4,
+            "walls": [
+                true,
+                false,
+                true,
+                false
+            ]
+        },
+        {
+            "posX": 4,
+            "posY": 4,
+            "walls": [
+                true,
+                false,
+                true,
+                false
+            ]
+        },
+        {
+            "posX": 5,
+            "posY": 4,
+            "walls": [
+                false,
+                true,
+                true,
+                false
+            ]
+        },
+        {
+            "posX": 6,
+            "posY": 4,
+            "walls": [
+                false,
+                true,
+                false,
+                true
+            ]
+        },
+        {
+            "posX": 0,
+            "posY": 5,
+            "walls": [
+                false,
+                true,
+                false,
+                true
+            ]
+        },
+        {
+            "posX": 1,
+            "posY": 5,
+            "walls": [
+                false,
+                true,
+                false,
+                true
+            ]
+        },
+        {
+            "posX": 2,
+            "posY": 5,
+            "walls": [
+                false,
+                false,
+                true,
+                true
+            ]
+        },
+        {
+            "posX": 3,
+            "posY": 5,
+            "walls": [
+                true,
+                false,
+                true,
+                false
+            ]
+        },
+        {
+            "posX": 4,
+            "posY": 5,
+            "walls": [
+                true,
+                false,
+                true,
+                false
+            ]
+        },
+        {
+            "posX": 5,
+            "posY": 5,
+            "walls": [
+                true,
+                false,
+                true,
+                false
+            ]
+        },
+        {
+            "posX": 6,
+            "posY": 5,
+            "walls": [
+                false,
+                true,
+                true,
+                false
+            ]
+        },
+        {
+            "posX": 0,
+            "posY": 6,
+            "walls": [
+                false,
+                false,
+                true,
+                true
+            ]
+        },
+        {
+            "posX": 1,
+            "posY": 6,
+            "walls": [
+                false,
+                false,
+                true,
+                false
+            ]
+        },
+        {
+            "posX": 2,
+            "posY": 6,
+            "walls": [
+                true,
+                false,
+                true,
+                false
+            ]
+        },
+        {
+            "posX": 3,
+            "posY": 6,
+            "walls": [
+                true,
+                false,
+                true,
+                false
+            ]
+        },
+        {
+            "posX": 4,
+            "posY": 6,
+            "walls": [
+                true,
+                false,
+                true,
+                false
+            ]
+        },
+        {
+            "posX": 5,
+            "posY": 6,
+            "walls": [
+                true,
+                false,
+                true,
+                false
+            ]
+        },
+        {
+            "posX": 6,
+            "posY": 6,
+            "walls": [
+                true,
+                true,
+                true,
+                false
+            ]
+        }
+    ]
 
 function createLines() {
     let idCadre = document.getElementById('cadre')
@@ -574,7 +574,6 @@ async function resolution() {
     let position = {"posX": 0, "posY": 0};
     structure_lab.find(element => element.posY === position.posY && element.posX === position.posX).visited = "true"
     let ligneStructure = structure_lab.find(element => element = position);
-    let grain2riz = {"posX": 0, "posY": 0};
     position = await avancee(position, ligneStructure);
     console.log(position)
     structure_lab.find(element => element.posY === position.posY && element.posX === position.posX).visited = "true"
@@ -582,25 +581,21 @@ async function resolution() {
     while (!(position.posX === positionFinal.posX && position.posY === positionFinal.posY)) {
         let nbMur = compteMur(ligneStructure);
         if (nbMur === 1) {
-            // grain2riz = {"posX": position.posX, "posY": position.posY};
-            if(ligneStructure.intersection===undefined) {
+            if (ligneStructure.intersection === undefined) {
                 structure_lab.find(element => element.posY === position.posY && element.posX === position.posX).intersection = "true"
             }
         }
         if (nbMur === 3) {
             let idCase = position.posY + "" + position.posX;
-            document.getElementById(idCase).style.backgroundColor = "purple";
-            // position.posX = grain2riz.posX;
-            // position.posY = grain2riz.posY;
-            // ligneStructure = structure_lab.find(element => element.posY === position.posY && element.posX === position.posX);
-            let arrayInter=structure_lab.filter(element=>element.intersection==="true");
-            console.log(arrayInter)
-                position.posX = arrayInter[0].posX;
-                position.posY = arrayInter[0].posY;
-                ligneStructure = structure_lab.find(element => element.posY === position.posY && element.posX === position.posX);
-                ligneStructure.intersection="false"
-                console.log(ligneStructure)
-                console.log(position)
+            document.getElementById(idCase).style.backgroundColor = "#5499C7";
+            let arrayInter = structure_lab.filter(element => element.intersection === "true");
+            position.posX = arrayInter[0].posX;
+            position.posY = arrayInter[0].posY;
+            ligneStructure = structure_lab.find(element => element.posY === position.posY && element.posX === position.posX);
+            ligneStructure.intersection = "false"
+            idCase = position.posY + "" + position.posX;
+            document.getElementById(idCase).style.backgroundColor = "#D35400";
+            console.log(position)
         } else {
             position = await avancee(position, ligneStructure);
             structure_lab.find(element => element.posY === position.posY && element.posX === position.posX).visited = "true"
@@ -654,7 +649,7 @@ async function dfs() {
     let position = {"posX": 0, "posY": 0};
     let ligneStructure = structure_lab.find(element => element = position);
     let stack = [];
-    let trajet=[];
+    let trajet = [];
     stack.push(position);
     while (stack.length !== 0) {
         position = stack.pop();
@@ -668,11 +663,12 @@ async function dfs() {
                 if (ligneStructure.walls.filter(murs => murs === true).length === 3) {
                     document.getElementById(trajet[i].posY + "" + trajet[i].posX).style.backgroundColor = "purple";
                 } else {
-                let idCase = trajet[i].posY + "" + trajet[i].posX;
-                await delay(200)
-                document.getElementById(idCase).setAttribute("class", "pion");
+                    let idCase = trajet[i].posY + "" + trajet[i].posX;
+                    await delay(200)
+                    document.getElementById(idCase).setAttribute("class", "pion");
+                }
             }
-            } document.getElementById(structure_lab[structure_lab.length - 1].posY+""+structure_lab[structure_lab.length - 1].posX).style.backgroundColor = "gold";
+            document.getElementById(structure_lab[structure_lab.length - 1].posY + "" + structure_lab[structure_lab.length - 1].posX).style.backgroundColor = "gold";
         } else {
             if (ligneStructure.walls[0] === false && structure_lab.find(element => element.posY === position.posY - 1 && element.posX === position.posX).visited === undefined) {
                 let voisin = {"posX": position.posX, "posY": position.posY - 1}
@@ -694,7 +690,57 @@ async function dfs() {
     }
 }
 
-async function bfs(){
+
+
+let positionFinal = {
+    "posX": structure_lab[structure_lab.length - 1].posX,
+    "posY": structure_lab[structure_lab.length - 1].posY
+};
+let position = {"posX": 0, "posY": 0};
+let stack = [];
+let trajet = [];
+stack.push(position);
+trajet.push(position)
+async function dfsrecursive(){
+    let position = stack.pop();
+    let ligneStructure = structure_lab.find(element => element.posY === position.posY && element.posX === position.posX);
+    structure_lab.find(element => element.posY === position.posY && element.posX === position.posX).visited = "true";
+    trajet.push(position)
+    console.log(position)
+    if (position.posX === positionFinal.posX && position.posY === positionFinal.posY) {
+        for (let i = 0; i < trajet.length; i++) {
+            ligneStructure = structure_lab.find(element => element.posY === trajet[i].posY && element.posX === trajet[i].posX);
+            if (ligneStructure.walls.filter(murs => murs === true).length === 3) {
+                document.getElementById(trajet[i].posY + "" + trajet[i].posX).style.backgroundColor = "purple";
+            } else {
+                let idCase = trajet[i].posY + "" + trajet[i].posX;
+                await delay(200)
+                document.getElementById(idCase).setAttribute("class", "pion");
+            }
+        }
+        document.getElementById(structure_lab[structure_lab.length - 1].posY + "" + structure_lab[structure_lab.length - 1].posX).style.backgroundColor = "gold";
+    } else {
+        if (ligneStructure.walls[0] === false && structure_lab.find(element => element.posY === position.posY - 1 && element.posX === position.posX).visited === undefined) {
+            let voisin = {"posX": position.posX, "posY": position.posY - 1}
+            stack.push(voisin)
+        }
+        if (ligneStructure.walls[1] === false && structure_lab.find(element => element.posY === position.posY && element.posX === position.posX + 1).visited === undefined) {
+            let voisin = {"posX": position.posX + 1, "posY": position.posY}
+            stack.push(voisin)
+        }
+        if (ligneStructure.walls[2] === false && structure_lab.find(element => element.posY === position.posY + 1 && element.posX === position.posX).visited === undefined) {
+            let voisin = {"posX": position.posX, "posY": position.posY + 1}
+            stack.push(voisin)
+        }
+        if (ligneStructure.walls[3] === false && structure_lab.find(element => element.posY === position.posY && element.posX === position.posX - 1).visited === undefined) {
+            let voisin = {"posX": position.posX - 1, "posY": position.posY}
+            stack.push(voisin)
+        }
+    }
+    await dfsrecursive(stack,trajet)
+}
+
+async function bfs() {
     let positionFinal = {
         "posX": structure_lab[structure_lab.length - 1].posX,
         "posY": structure_lab[structure_lab.length - 1].posY
@@ -702,7 +748,7 @@ async function bfs(){
     let position = {"posX": 0, "posY": 0};
     let ligneStructure = structure_lab.find(element => element = position);
     let queue = [];
-    let trajet=[];
+    let trajet = [];
     queue.unshift(position);
     while (queue.length !== 0) {
         position = queue.shift();
@@ -720,7 +766,8 @@ async function bfs(){
                     await delay(500)
                     document.getElementById(idCase).setAttribute("class", "pion");
                 }
-            } document.getElementById(structure_lab[structure_lab.length - 1].posY+""+structure_lab[structure_lab.length - 1].posX).style.backgroundColor = "gold";
+            }
+            document.getElementById(structure_lab[structure_lab.length - 1].posY + "" + structure_lab[structure_lab.length - 1].posX).style.backgroundColor = "gold";
         } else {
             if (ligneStructure.walls[0] === false && structure_lab.find(element => element.posY === position.posY - 1 && element.posX === position.posX).visited === undefined) {
                 let voisin = {"posX": position.posX, "posY": position.posY - 1}
@@ -740,4 +787,45 @@ async function bfs(){
             }
         }
     }
+}
+
+let queue=[];
+queue.unshift(position);
+async function bfsrecursive(){
+    let position = queue.shift();
+    let ligneStructure = structure_lab.find(element => element.posY === position.posY && element.posX === position.posX);
+    structure_lab.find(element => element.posY === position.posY && element.posX === position.posX).visited = "true";
+    trajet.push(position)
+    console.log(position)
+    if (position.posX === positionFinal.posX && position.posY === positionFinal.posY) {
+        for (let i = 0; i < trajet.length; i++) {
+            ligneStructure = structure_lab.find(element => element.posY === trajet[i].posY && element.posX === trajet[i].posX);
+            if (ligneStructure.walls.filter(murs => murs === true).length === 3) {
+                document.getElementById(trajet[i].posY + "" + trajet[i].posX).style.backgroundColor = "purple";
+            } else {
+                let idCase = trajet[i].posY + "" + trajet[i].posX;
+                await delay(200)
+                document.getElementById(idCase).setAttribute("class", "pion");
+            }
+        }
+        document.getElementById(structure_lab[structure_lab.length - 1].posY + "" + structure_lab[structure_lab.length - 1].posX).style.backgroundColor = "gold";
+    } else {
+        if (ligneStructure.walls[0] === false && structure_lab.find(element => element.posY === position.posY - 1 && element.posX === position.posX).visited === undefined) {
+            let voisin = {"posX": position.posX, "posY": position.posY - 1}
+            queue.push(voisin)
+        }
+        if (ligneStructure.walls[1] === false && structure_lab.find(element => element.posY === position.posY && element.posX === position.posX + 1).visited === undefined) {
+            let voisin = {"posX": position.posX + 1, "posY": position.posY}
+            queue.push(voisin)
+        }
+        if (ligneStructure.walls[2] === false && structure_lab.find(element => element.posY === position.posY + 1 && element.posX === position.posX).visited === undefined) {
+            let voisin = {"posX": position.posX, "posY": position.posY + 1}
+            queue.push(voisin)
+        }
+        if (ligneStructure.walls[3] === false && structure_lab.find(element => element.posY === position.posY && element.posX === position.posX - 1).visited === undefined) {
+            let voisin = {"posX": position.posX - 1, "posY": position.posY}
+            queue.push(voisin)
+        }
+    }
+    await bfsrecursive(queue,trajet)
 }
