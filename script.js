@@ -1,502 +1,15 @@
-let structure_lab =
-    [
-        {
-            "posX": 0,
-            "posY": 0,
-            "walls": [
-                true,
-                true,
-                false,
-                true
-            ]
-        },
-        {
-            "posX": 1,
-            "posY": 0,
-            "walls": [
-                true,
-                false,
-                true,
-                true
-            ]
-        },
-        {
-            "posX": 2,
-            "posY": 0,
-            "walls": [
-                true,
-                false,
-                true,
-                false
-            ]
-        },
-        {
-            "posX": 3,
-            "posY": 0,
-            "walls": [
-                true,
-                false,
-                false,
-                false
-            ]
-        },
-        {
-            "posX": 4,
-            "posY": 0,
-            "walls": [
-                true,
-                false,
-                true,
-                false
-            ]
-        },
-        {
-            "posX": 5,
-            "posY": 0,
-            "walls": [
-                true,
-                false,
-                true,
-                false
-            ]
-        },
-        {
-            "posX": 6,
-            "posY": 0,
-            "walls": [
-                true,
-                true,
-                false,
-                false
-            ]
-        },
-        {
-            "posX": 0,
-            "posY": 1,
-            "walls": [
-                false,
-                true,
-                false,
-                true
-            ]
-        },
-        {
-            "posX": 1,
-            "posY": 1,
-            "walls": [
-                true,
-                false,
-                false,
-                true
-            ]
-        },
-        {
-            "posX": 2,
-            "posY": 1,
-            "walls": [
-                true,
-                true,
-                false,
-                false
-            ]
-        },
-        {
-            "posX": 3,
-            "posY": 1,
-            "walls": [
-                false,
-                false,
-                false,
-                true
-            ]
-        },
-        {
-            "posX": 4,
-            "posY": 1,
-            "walls": [
-                true,
-                true,
-                true,
-                false
-            ]
-        },
-        {
-            "posX": 5,
-            "posY": 1,
-            "walls": [
-                true,
-                false,
-                false,
-                true
-            ]
-        },
-        {
-            "posX": 6,
-            "posY": 1,
-            "walls": [
-                false,
-                true,
-                false,
-                false
-            ]
-        },
-        {
-            "posX": 0,
-            "posY": 2,
-            "walls": [
-                false,
-                false,
-                true,
-                true
-            ]
-        },
-        {
-            "posX": 1,
-            "posY": 2,
-            "walls": [
-                false,
-                true,
-                true,
-                false
-            ]
-        },
-        {
-            "posX": 2,
-            "posY": 2,
-            "walls": [
-                false,
-                true,
-                false,
-                true
-            ]
-        },
-        {
-            "posX": 3,
-            "posY": 2,
-            "walls": [
-                false,
-                true,
-                true,
-                true
-            ]
-        },
-        {
-            "posX": 4,
-            "posY": 2,
-            "walls": [
-                true,
-                false,
-                false,
-                true
-            ]
-        },
-        {
-            "posX": 5,
-            "posY": 2,
-            "walls": [
-                false,
-                true,
-                true,
-                false
-            ]
-        },
-        {
-            "posX": 6,
-            "posY": 2,
-            "walls": [
-                false,
-                true,
-                false,
-                true
-            ]
-        },
-        {
-            "posX": 0,
-            "posY": 3,
-            "walls": [
-                true,
-                false,
-                false,
-                true
-            ]
-        },
-        {
-            "posX": 1,
-            "posY": 3,
-            "walls": [
-                true,
-                true,
-                true,
-                false
-            ]
-        },
-        {
-            "posX": 2,
-            "posY": 3,
-            "walls": [
-                false,
-                false,
-                true,
-                true
-            ]
-        },
-        {
-            "posX": 3,
-            "posY": 3,
-            "walls": [
-                true,
-                false,
-                true,
-                false
-            ]
-        },
-        {
-            "posX": 4,
-            "posY": 3,
-            "walls": [
-                false,
-                true,
-                true,
-                false
-            ]
-        },
-        {
-            "posX": 5,
-            "posY": 3,
-            "walls": [
-                true,
-                true,
-                false,
-                true
-            ]
-        },
-        {
-            "posX": 6,
-            "posY": 3,
-            "walls": [
-                false,
-                true,
-                false,
-                true
-            ]
-        },
-        {
-            "posX": 0,
-            "posY": 4,
-            "walls": [
-                false,
-                true,
-                false,
-                true
-            ]
-        },
-        {
-            "posX": 1,
-            "posY": 4,
-            "walls": [
-                true,
-                false,
-                false,
-                true
-            ]
-        },
-        {
-            "posX": 2,
-            "posY": 4,
-            "walls": [
-                true,
-                false,
-                false,
-                false
-            ]
-        },
-        {
-            "posX": 3,
-            "posY": 4,
-            "walls": [
-                true,
-                false,
-                true,
-                false
-            ]
-        },
-        {
-            "posX": 4,
-            "posY": 4,
-            "walls": [
-                true,
-                false,
-                true,
-                false
-            ]
-        },
-        {
-            "posX": 5,
-            "posY": 4,
-            "walls": [
-                false,
-                true,
-                true,
-                false
-            ]
-        },
-        {
-            "posX": 6,
-            "posY": 4,
-            "walls": [
-                false,
-                true,
-                false,
-                true
-            ]
-        },
-        {
-            "posX": 0,
-            "posY": 5,
-            "walls": [
-                false,
-                true,
-                false,
-                true
-            ]
-        },
-        {
-            "posX": 1,
-            "posY": 5,
-            "walls": [
-                false,
-                true,
-                false,
-                true
-            ]
-        },
-        {
-            "posX": 2,
-            "posY": 5,
-            "walls": [
-                false,
-                false,
-                true,
-                true
-            ]
-        },
-        {
-            "posX": 3,
-            "posY": 5,
-            "walls": [
-                true,
-                false,
-                true,
-                false
-            ]
-        },
-        {
-            "posX": 4,
-            "posY": 5,
-            "walls": [
-                true,
-                false,
-                true,
-                false
-            ]
-        },
-        {
-            "posX": 5,
-            "posY": 5,
-            "walls": [
-                true,
-                false,
-                true,
-                false
-            ]
-        },
-        {
-            "posX": 6,
-            "posY": 5,
-            "walls": [
-                false,
-                true,
-                true,
-                false
-            ]
-        },
-        {
-            "posX": 0,
-            "posY": 6,
-            "walls": [
-                false,
-                false,
-                true,
-                true
-            ]
-        },
-        {
-            "posX": 1,
-            "posY": 6,
-            "walls": [
-                false,
-                false,
-                true,
-                false
-            ]
-        },
-        {
-            "posX": 2,
-            "posY": 6,
-            "walls": [
-                true,
-                false,
-                true,
-                false
-            ]
-        },
-        {
-            "posX": 3,
-            "posY": 6,
-            "walls": [
-                true,
-                false,
-                true,
-                false
-            ]
-        },
-        {
-            "posX": 4,
-            "posY": 6,
-            "walls": [
-                true,
-                false,
-                true,
-                false
-            ]
-        },
-        {
-            "posX": 5,
-            "posY": 6,
-            "walls": [
-                true,
-                false,
-                true,
-                false
-            ]
-        },
-        {
-            "posX": 6,
-            "posY": 6,
-            "walls": [
-                true,
-                true,
-                true,
-                false
-            ]
-        }
-    ]
+
+
+let taille="5";
+let ex="ex-2";
+let structure_lab=labyrinthe[taille][ex];
+
+console.log(structure_lab)
 
 function createLines() {
     let idCadre = document.getElementById('cadre')
     for (let i = 0; i <= structure_lab[structure_lab.length - 1].posY; i++) {
         let nvldiv = document.createElement('div');
-
         idCadre.append(nvldiv);
         nvldiv.classList.add("ligne");
         nvldiv.setAttribute("id", i)
@@ -504,9 +17,14 @@ function createLines() {
             let carre = document.createElement('div');
             nvldiv.append(carre);
             carre.classList.add("case");
-            carre.setAttribute("id", i + "" + j)
+            carre.setAttribute("id", i +"-"+ j)
             let idcarre = carre.getAttribute("id");
-            const foundelement = structure_lab.find(el => findLeBon(el, idcarre));
+            let separation=idcarre.indexOf('-');
+            console.log("posX=" + idcarre.substring(separation+1,idcarre.length))
+            console.log("posY=" +idcarre.substring(0,separation))
+            let foundelement= structure_lab.find(el=>el.posX==idcarre.substring(separation+1,idcarre.length) && el.posY ==idcarre.substring(0,separation))
+            // let foundelement = structure_lab.find(el => findLeBon(el, idcarre));
+            console.log(foundelement)
             createWalls(foundelement, carre);
         }
     }
@@ -514,9 +32,17 @@ function createLines() {
     arrivee();
 }
 
-function findLeBon(element, idcarre) {
-    return (element.posX == idcarre.charAt(1) && element.posY == idcarre.charAt(0))
-}
+// function get_case(lab, x, y){
+//     return lab.find(el=>el.==idcarre.substring(separation,idcarre.length)
+// }
+
+// function findLeBon(element, idcarre) {
+//     let separation=idcarre.indexOf('-')
+//     console.log(idcarre.substring(separation+1,idcarre.length))
+//     console.log(idcarre.substring(0,separation))
+//     return (element.posX==idcarre.substring(separation,idcarre.length) && element.posY ==idcarre.substring(0,separation))
+//     // return (element.posX == idcarre.charAt(1) && element.posY == idcarre.charAt(0))
+// }
 
 function createWalls(array, element) {
     createTopWall(array, element);
@@ -526,7 +52,7 @@ function createWalls(array, element) {
 }
 
 function createTopWall(array, element) {
-    if (array.walls[0] === true) {
+    if (array.walls[0]) {
         element.style.borderTop = "red solid ";
         // element.setAttribute("style",{border-top:green solid ;2px})
     }
@@ -554,12 +80,12 @@ function createLeftWall(array, element) {
 }
 
 function depart() {
-    let caseDepart = document.getElementById("00");
+    let caseDepart = document.getElementById("0-0");
     caseDepart.style.backgroundColor = "orange";
 }
 
 function arrivee() {
-    let caseArrivee = document.getElementById(structure_lab[structure_lab.length - 1].posX + "" + structure_lab[structure_lab.length - 1].posY);
+    let caseArrivee = document.getElementById(structure_lab[structure_lab.length - 1].posX + "-" + structure_lab[structure_lab.length - 1].posY);
     caseArrivee.style.backgroundColor = "green";
 }
 
@@ -586,14 +112,14 @@ async function resolution() {
             }
         }
         if (nbMur === 3) {
-            let idCase = position.posY + "" + position.posX;
+            let idCase = position.posY + "-" + position.posX;
             document.getElementById(idCase).style.backgroundColor = "#5499C7";
             let arrayInter = structure_lab.filter(element => element.intersection === "true");
             position.posX = arrayInter[0].posX;
             position.posY = arrayInter[0].posY;
             ligneStructure = structure_lab.find(element => element.posY === position.posY && element.posX === position.posX);
             ligneStructure.intersection = "false"
-            idCase = position.posY + "" + position.posX;
+            idCase = position.posY + "-" + position.posX;
             document.getElementById(idCase).style.backgroundColor = "#D35400";
             console.log(position)
         } else {
@@ -628,7 +154,7 @@ function compteMur(ligneStructure) {
 }
 
 function displayPion(position) {
-    let idCase = position.posY + "" + position.posX;
+    let idCase = position.posY + "-" + position.posX;
     document.getElementById(idCase).setAttribute("class", "pion");
 }
 
@@ -661,14 +187,14 @@ async function dfs() {
             for (let i = 0; i < trajet.length; i++) {
                 ligneStructure = structure_lab.find(element => element.posY === trajet[i].posY && element.posX === trajet[i].posX);
                 if (ligneStructure.walls.filter(murs => murs === true).length === 3) {
-                    document.getElementById(trajet[i].posY + "" + trajet[i].posX).style.backgroundColor = "purple";
+                    document.getElementById(trajet[i].posY + "-" + trajet[i].posX).style.backgroundColor = "purple";
                 } else {
-                    let idCase = trajet[i].posY + "" + trajet[i].posX;
+                    let idCase = trajet[i].posY + "-" + trajet[i].posX;
                     await delay(200)
                     document.getElementById(idCase).setAttribute("class", "pion");
                 }
             }
-            document.getElementById(structure_lab[structure_lab.length - 1].posY + "" + structure_lab[structure_lab.length - 1].posX).style.backgroundColor = "gold";
+            document.getElementById(structure_lab[structure_lab.length - 1].posY + "-" + structure_lab[structure_lab.length - 1].posX).style.backgroundColor = "gold";
         } else {
             if (ligneStructure.walls[0] === false && structure_lab.find(element => element.posY === position.posY - 1 && element.posX === position.posX).visited === undefined) {
                 let voisin = {"posX": position.posX, "posY": position.posY - 1}
@@ -712,14 +238,14 @@ async function dfsrecursive(){
             for (let i = 0; i < trajet.length; i++) {
                 ligneStructure = structure_lab.find(element => element.posY === trajet[i].posY && element.posX === trajet[i].posX);
                 if (ligneStructure.walls.filter(murs => murs === true).length === 3) {
-                    document.getElementById(trajet[i].posY + "" + trajet[i].posX).style.backgroundColor = "purple";
+                    document.getElementById(trajet[i].posY + "-" + trajet[i].posX).style.backgroundColor = "purple";
                 } else {
-                    let idCase = trajet[i].posY + "" + trajet[i].posX;
+                    let idCase = trajet[i].posY + "-" + trajet[i].posX;
                     await delay(200)
                     document.getElementById(idCase).setAttribute("class", "pion");
                 }
             }
-            document.getElementById(structure_lab[structure_lab.length - 1].posY + "" + structure_lab[structure_lab.length - 1].posX).style.backgroundColor = "gold";
+            document.getElementById(structure_lab[structure_lab.length - 1].posY + "-" + structure_lab[structure_lab.length - 1].posX).style.backgroundColor = "gold";
         } else {
             if (ligneStructure.walls[0] === false && structure_lab.find(element => element.posY === position.posY - 1 && element.posX === position.posX).visited === undefined) {
                 let voisin = {"posX": position.posX, "posY": position.posY - 1}
@@ -762,9 +288,9 @@ async function bfs() {
             for (let i = 0; i < trajet.length; i++) {
                 ligneStructure = structure_lab.find(element => element.posY === trajet[i].posY && element.posX === trajet[i].posX);
                 if (ligneStructure.walls.filter(murs => murs === true).length === 3) {
-                    document.getElementById(trajet[i].posY + "" + trajet[i].posX).style.backgroundColor = "purple";
+                    document.getElementById(trajet[i].posY + "-" + trajet[i].posX).style.backgroundColor = "purple";
                 } else {
-                    let idCase = trajet[i].posY + "" + trajet[i].posX;
+                    let idCase = trajet[i].posY + "-" + trajet[i].posX;
                     await delay(500)
                     document.getElementById(idCase).setAttribute("class", "pion");
                 }
@@ -798,20 +324,28 @@ async function bfsrecursive() {
         let position = queue.shift();
         let ligneStructure = structure_lab.find(element => element.posY === position.posY && element.posX === position.posX);
         structure_lab.find(element => element.posY === position.posY && element.posX === position.posX).visited = "true";
+        let nbMur=compteMur(ligneStructure)
+        if (nbMur === 1) {
+            if (ligneStructure.intersection === undefined) {
+                structure_lab.find(element => element.posY === position.posY && element.posX === position.posX).intersection = "true"
+                let idCase = position.posY + "-" + position.posX;
+                document.getElementById(idCase).style.backgroundColor = "#D35400";
+            }
+        }
         trajet.push(position)
         console.log(position)
         if (position.posX === positionFinal.posX && position.posY === positionFinal.posY) {
             for (let i = 0; i < trajet.length; i++) {
                 ligneStructure = structure_lab.find(element => element.posY === trajet[i].posY && element.posX === trajet[i].posX);
                 if (ligneStructure.walls.filter(murs => murs === true).length === 3) {
-                    document.getElementById(trajet[i].posY + "" + trajet[i].posX).style.backgroundColor = "purple";
+                    document.getElementById(trajet[i].posY + "-" + trajet[i].posX).style.backgroundColor = "purple";
                 } else {
-                    let idCase = trajet[i].posY + "" + trajet[i].posX;
+                    let idCase = trajet[i].posY + "-" + trajet[i].posX;
                     await delay(200)
                     document.getElementById(idCase).setAttribute("class", "pion");
                 }
             }
-            document.getElementById(structure_lab[structure_lab.length - 1].posY + "" + structure_lab[structure_lab.length - 1].posX).style.backgroundColor = "gold";
+            document.getElementById(structure_lab[structure_lab.length - 1].posY + "-" + structure_lab[structure_lab.length - 1].posX).style.backgroundColor = "gold";
         } else {
             if (ligneStructure.walls[0] === false && structure_lab.find(element => element.posY === position.posY - 1 && element.posX === position.posX).visited === undefined) {
                 let voisin = {"posX": position.posX, "posY": position.posY - 1}
