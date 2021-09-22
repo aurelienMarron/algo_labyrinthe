@@ -1,4 +1,4 @@
-let taille = "25";
+let taille = "7";
 let ex = "ex-1";
 let structure_lab = labyrinthe[taille][ex];
 
@@ -315,7 +315,7 @@ async function bfsrecursive() {
                     document.getElementById(trajet[i].posY + "-" + trajet[i].posX).style.backgroundColor = "purple";
                 } else {
                     let idCase = trajet[i].posY + "-" + trajet[i].posX;
-                    await delay(100)
+                    await delay(50)
                     document.getElementById(idCase).setAttribute("class", "pion");
                 }
             }
