@@ -1,10 +1,7 @@
+let taille = "25";
+let ex = "ex-1";
+let structure_lab = labyrinthe[taille][ex];
 
-
-let taille="5";
-let ex="ex-2";
-let structure_lab=labyrinthe[taille][ex];
-
-console.log(structure_lab)
 
 function createLines() {
     let idCadre = document.getElementById('cadre')
@@ -17,32 +14,16 @@ function createLines() {
             let carre = document.createElement('div');
             nvldiv.append(carre);
             carre.classList.add("case");
-            carre.setAttribute("id", i +"-"+ j)
+            carre.setAttribute("id", i + "-" + j)
             let idcarre = carre.getAttribute("id");
-            let separation=idcarre.indexOf('-');
-            console.log("posX=" + idcarre.substring(separation+1,idcarre.length))
-            console.log("posY=" +idcarre.substring(0,separation))
-            let foundelement= structure_lab.find(el=>el.posX==idcarre.substring(separation+1,idcarre.length) && el.posY ==idcarre.substring(0,separation))
-            // let foundelement = structure_lab.find(el => findLeBon(el, idcarre));
-            console.log(foundelement)
+            let separation = idcarre.indexOf('-');
+            let foundelement = structure_lab.find(el => el.posX == idcarre.substring(separation + 1, idcarre.length) && el.posY == idcarre.substring(0, separation))
             createWalls(foundelement, carre);
         }
     }
     depart();
     arrivee();
 }
-
-// function get_case(lab, x, y){
-//     return lab.find(el=>el.==idcarre.substring(separation,idcarre.length)
-// }
-
-// function findLeBon(element, idcarre) {
-//     let separation=idcarre.indexOf('-')
-//     console.log(idcarre.substring(separation+1,idcarre.length))
-//     console.log(idcarre.substring(0,separation))
-//     return (element.posX==idcarre.substring(separation,idcarre.length) && element.posY ==idcarre.substring(0,separation))
-//     // return (element.posX == idcarre.charAt(1) && element.posY == idcarre.charAt(0))
-// }
 
 function createWalls(array, element) {
     createTopWall(array, element);
@@ -129,7 +110,7 @@ async function resolution() {
             console.log(position)
         }
     }
-    let idCase = position.posY + "" + position.posX;
+    let idCase = position.posY + "-" + position.posX;
     document.getElementById(idCase).style.backgroundColor = "gold";
     console.log(position)
 }
@@ -217,7 +198,6 @@ async function dfs() {
 }
 
 
-
 let positionFinal = {
     "posX": structure_lab[structure_lab.length - 1].posX,
     "posY": structure_lab[structure_lab.length - 1].posY
@@ -227,8 +207,9 @@ let stack = [];
 let trajet = [];
 stack.push(position);
 trajet.push(position)
-async function dfsrecursive(){
-    if(stack.length!==0) {
+
+async function dfsrecursive() {
+    if (stack.length !== 0) {
         position = stack.pop();
         let ligneStructure = structure_lab.find(element => element.posY === position.posY && element.posX === position.posX);
         structure_lab.find(element => element.posY === position.posY && element.posX === position.posX).visited = "true";
@@ -317,21 +298,14 @@ async function bfs() {
     }
 }
 
-let queue=[];
+let queue = [];
 queue.unshift(position);
+
 async function bfsrecursive() {
     if (queue.length !== 0) {
         let position = queue.shift();
         let ligneStructure = structure_lab.find(element => element.posY === position.posY && element.posX === position.posX);
         structure_lab.find(element => element.posY === position.posY && element.posX === position.posX).visited = "true";
-        let nbMur=compteMur(ligneStructure)
-        if (nbMur === 1) {
-            if (ligneStructure.intersection === undefined) {
-                structure_lab.find(element => element.posY === position.posY && element.posX === position.posX).intersection = "true"
-                let idCase = position.posY + "-" + position.posX;
-                document.getElementById(idCase).style.backgroundColor = "#D35400";
-            }
-        }
         trajet.push(position)
         console.log(position)
         if (position.posX === positionFinal.posX && position.posY === positionFinal.posY) {
@@ -341,26 +315,37 @@ async function bfsrecursive() {
                     document.getElementById(trajet[i].posY + "-" + trajet[i].posX).style.backgroundColor = "purple";
                 } else {
                     let idCase = trajet[i].posY + "-" + trajet[i].posX;
-                    await delay(200)
+                    await delay(100)
                     document.getElementById(idCase).setAttribute("class", "pion");
                 }
             }
             document.getElementById(structure_lab[structure_lab.length - 1].posY + "-" + structure_lab[structure_lab.length - 1].posX).style.backgroundColor = "gold";
+            while (position.parent !== undefined) {
+                position = position.parent
+                console.log(position)
+                let idCase = position.posY + "-" + position.posX
+                document.getElementById(idCase).style.backgroundColor = "#134464";
+            }
         } else {
             if (ligneStructure.walls[0] === false && structure_lab.find(element => element.posY === position.posY - 1 && element.posX === position.posX).visited === undefined) {
                 let voisin = {"posX": position.posX, "posY": position.posY - 1}
+                voisin.parent = position
                 queue.push(voisin)
+
             }
             if (ligneStructure.walls[1] === false && structure_lab.find(element => element.posY === position.posY && element.posX === position.posX + 1).visited === undefined) {
                 let voisin = {"posX": position.posX + 1, "posY": position.posY}
+                voisin.parent = position
                 queue.push(voisin)
             }
             if (ligneStructure.walls[2] === false && structure_lab.find(element => element.posY === position.posY + 1 && element.posX === position.posX).visited === undefined) {
                 let voisin = {"posX": position.posX, "posY": position.posY + 1}
+                voisin.parent = position
                 queue.push(voisin)
             }
             if (ligneStructure.walls[3] === false && structure_lab.find(element => element.posY === position.posY && element.posX === position.posX - 1).visited === undefined) {
                 let voisin = {"posX": position.posX - 1, "posY": position.posY}
+                voisin.parent = position
                 queue.push(voisin)
             }
         }
